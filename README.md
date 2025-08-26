@@ -121,10 +121,10 @@ Create three VMs and connect them to your Host-Only network.
     or
     ```bash
     # Test for SQL Injection (should be blocked)
-    curl "[http://192.168.10.101:8080/dvwa/vulnerabilities/sqli/?id=1'%20OR%20'1'='1&Submit=Submit#](http://192.168.10.101:8080/dvwa/vulnerabilities/sqli/?id=1'%20OR%20'1'='1&Submit=Submit#)"
+    curl "[http://192.168.10.101/dvwa/vulnerabilities/sqli/?id=1'%20OR%20'1'='1&Submit=Submit#](http://192.168.10.101:8080/dvwa/vulnerabilities/sqli/?id=1'%20OR%20'1'='1&Submit=Submit#)"
 
     # Test for XSS (should be blocked)
-    curl "[http://192.168.10.101:8080/dvwa/vulnerabilities/xss_r/?name=](http://192.168.10.101:8080/dvwa/vulnerabilities/xss_r/?name=)<script>alert('xss')</script>"
+    curl "[http://192.168.10.101/dvwa/vulnerabilities/xss_r/?name=](http://192.168.10.101:8080/dvwa/vulnerabilities/xss_r/?name=)<script>alert('xss')</script>"
     ```
 
 ---
