@@ -156,3 +156,7 @@ The WAF operates as a reverse proxy, creating a protective barrier for your web 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## 📝 Author
+
+Created with ❤️ by **AMIRX**
