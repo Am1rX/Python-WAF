@@ -1,7 +1,7 @@
 # How to use:
 # 1. For SSL/TLS mode, first generate a certificate and key:
 #    openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
-# 2. Run the script: python3 simple_waf.py
+# 2. Run the script: python3 WAF.py
 # 3. Follow the on-screen prompts to configure the WAF.
 
 import http.server
@@ -150,9 +150,9 @@ if __name__ == "__main__":
     CONFIG['SSL_MODE'] = (choice == '2')
 
     # Get IPs and Ports
-    CONFIG['TARGET_HOST'] = input("Enter Your Web Server IP (e.g., 10.130): ")
+    CONFIG['TARGET_HOST'] = input("Enter Your Web Server IP : ")
     CONFIG['TARGET_PORT'] = 80 # Assuming backend is always HTTP for simplicity
-    CONFIG['PROXY_IP_FOR_REWRITING'] = input("Enter Your WAF Server IP (e.g., 10.129): ")
+    CONFIG['PROXY_IP_FOR_REWRITING'] = input("Enter Your WAF Server IP : ")
     CONFIG['PROXY_HOST'] = '0.0.0.0'
     
     if CONFIG['SSL_MODE']:
@@ -168,3 +168,4 @@ if __name__ == "__main__":
     
     print("\n--- Starting WAF ---")
     run_server()
+
