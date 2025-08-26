@@ -109,7 +109,7 @@ Create three VMs and connect them to your Host-Only network.
 
 1.  **On the WAF VM (`192.168.10.101`):**
     -   Clone the repository and install dependencies.
-    -   Run `python3 simple_waf.py`.
+    -   Run `python3 WAF.py`.
     -   When prompted, enter the Web Server IP (`192.168.10.50`) and the WAF IP (`192.168.10.101`).
 
 2.  **On the Attacker VM (`192.168.10.102`):**
@@ -117,7 +117,7 @@ Create three VMs and connect them to your Host-Only network.
     -   Use `curl` or your browser to test attacks. All traffic must be sent to the WAF's IP.
 
     **Example Attack Tests:**
-    Open the WAF IP address, it will open OWASP BWA in the web
+    Open the WAF IP address, and it will open OWASP BWA in the web
     or
     ```bash
     # Test for SQL Injection (should be blocked)
